@@ -11,7 +11,8 @@ Preemptive scheduler was constructed using a doubly linked list; wherein the dat
 ###**Compilation Procedure**:
 1. Extract the tarball and run make - if you want to get gtthread.a.
 2. Once gtthread.a is produced, run the following command from your Terminal:
-3. gcc -g -Wall -pedantic -I{...} -o diningPhilo diningPhilo.c gtthread.a
+  
+  gcc -g -Wall -pedantic -I{...} -o diningPhilo diningPhilo.c gtthread.a
 
 ###**Preventing deadlocks in Dining Philosophers solution**:
 I've used the resource hierarchy solution in order to stay clear of deadlocks. In this solution, all chopsticks are numbered (in this case, from 1-5). Whenever a philosopher feels hungry, he / she is made to pick a chopstick with lower numbering first, for. e.g. Philosopher #1 will acquire Chopstick #1 before he / she tries to acquire Chopstick #5. Similarly, Philosopher #2 will acquire Chopstick #1 before trying to acquire Chopstick #2, and so on. There is no ordering for relinquishing chopsticks; if the order is maintained while picking the chopsticks, the solution doesn't deadlock.
