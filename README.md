@@ -1,6 +1,6 @@
 #GTThreads + Dining Philosophers Problem
 
-Implementeation of a user-level thread package - with an API similar to [**pthreads**](http://man7.org/linux/man-pages/man7/pthreads.7.html). The library is then used for implementing a solution to the classic [**Dining Philosophers problem**](http://en.wikipedia.org/wiki/Dining_philosophers_problem).
+Implementation of a user-level thread package - with an API similar to [pthreads](http://man7.org/linux/man-pages/man7/pthreads.7.html). The library is then used for implementing a solution to the classic [Dining Philosophers problem](http://en.wikipedia.org/wiki/Dining_philosophers_problem).
 
 ###**Development Environment:** 
 Ubuntu 12.04 LTS (running on 64-bit x86 hardware).
