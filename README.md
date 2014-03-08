@@ -2,6 +2,22 @@
 
 Implementation of a user-level thread package - with an API similar to [pthreads](http://man7.org/linux/man-pages/man7/pthreads.7.html). The library is then used for implementing a solution to the classic [Dining Philosophers problem](http://en.wikipedia.org/wiki/Dining_philosophers_problem).
 
+
+###GTThreads API
+  * void gtthread\_init(long period);
+  * int  gtthread\_create(gtthread\_t \*thread,void \*(\*start_routine)(void \*),void \*arg);
+  * int  gtthread\_join(gtthread\_t thread, void \*\*status);
+  * void gtthread\_exit(void \*retval);
+  * int  gtthread\_yield(void);
+  * int  gtthread\_equal(gtthread\_t t1, gtthread\_t t2);
+  * int  gtthread\_cancel(gtthread\_t thread);
+  * gtthread\_t gtthread\_self(void);
+
+###Mutex API
+  * int  gtthread\_mutex\_init(gtthread\_mutex\_t \*mutex);
+  * int  gtthread\_mutex\_lock(gtthread\_mutex\_t \*mutex);
+  * int  gtthread\_mutex\_unlock(gtthread\_mutex\_t \*mutex);
+
 ###**Development Environment:** 
 Ubuntu 12.04 LTS (running on 64-bit x86 hardware).
 
